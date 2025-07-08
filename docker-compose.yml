@@ -5,7 +5,7 @@ services:
     container_name: backend
     build: ./Backend
     ports:
-      - "3036:3036"
+      - "3607:3607"
     depends_on:
       - postgres
     environment:
@@ -20,7 +20,7 @@ services:
     container_name: employee-side
     build: ./Employee-Side
     ports:
-      - "8039:80"
+      - "8614:80"
     networks:
       - payslip-net
 
@@ -28,7 +28,7 @@ services:
     container_name: hr-side
     build: ./HR-Side
     ports:
-      - "8040:80"
+      - "8615:80"
     networks:
       - payslip-net
 
@@ -36,7 +36,7 @@ services:
     container_name: postgres
     image: postgres:14
     ports:
-      - "5005:5432"
+      - "5607:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin123
